@@ -3,7 +3,7 @@ import { COURSES } from "./courses.mock";
 
 @Injectable()
 export class CoursesService {
-  courses: typeof COURSES;
+  courses = COURSES;
 
   getCourses(): Promise<any> {
     return new Promise((resolve) => {

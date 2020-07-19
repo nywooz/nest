@@ -17,8 +17,8 @@ export class CoursesController {
   @Get()
   async getCourses() {
     const courses = await this.coursesService.getCourses();
+    return courses;
   }
-
   @Get(":courseId")
   async getCourse(@Param("courseId") courseId) {
     const course = await this.coursesService.getCourse(courseId);
